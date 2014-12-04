@@ -18,6 +18,10 @@ describe Opushon do
     it 'MUST raise a Opushon syntax error' do
       lambda { Opushon.load('["BOOM"]') }.must_raise(Opushon::SyntaxError)
     end
+
+    it 'MUST raise a Opushon syntax error' do
+      lambda { Opushon.load('{"BOOM":{}}') }.must_raise(Opushon::VerbError)
+    end
   end
 
   describe '.dump' do

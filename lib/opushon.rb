@@ -1,3 +1,4 @@
+require_relative File.join(*%w(opushon error))
 require_relative File.join(*%w(opushon instance))
 require_relative File.join(*%w(opushon version))
 

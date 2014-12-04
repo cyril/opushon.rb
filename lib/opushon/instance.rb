@@ -1,17 +1,19 @@
-require_relative 'syntax_error'
+require_relative 'verbs'
 require 'json'
 
 # Namespace for the Opushon library.
 module Opushon
   # Parse a Opushon string in opushon.
-  #
-  # Raises a Opushon::SyntaxError when a Opushon syntax error is detected.
   class Instance
     def initialize(opushon)
       o = JSON.load opushon
 
-      if o.is_a?(Array)
+      unless o.is_a?(Hash)
         fail SyntaxError
+      end
+
+      unless o.keys.map(&:to_sym).to_set.subset? VERBS
+        fail VerbError
       end
     end
 
