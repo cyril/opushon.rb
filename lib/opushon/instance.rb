@@ -1,4 +1,4 @@
-require_relative 'verbs'
+require_relative 'verb'
 require 'json'
 
 # Namespace for the Opushon library.
