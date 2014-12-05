@@ -1,4 +1,4 @@
 require 'minitest/autorun'
 
 require_relative 'support'
-require 'opushon'
+require_relative File.join(*%w(.. lib opushon))

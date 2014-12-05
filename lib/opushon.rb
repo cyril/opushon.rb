@@ -16,7 +16,7 @@ module Opushon
     # Dump Ruby object o to a Opushon string.
     # @api public
     def dump(o)
-      '{"DELETE":{"title":"Delete issues","description":"Remove every issues."}}'
+      JSON.dump o
     end
   end
 end
