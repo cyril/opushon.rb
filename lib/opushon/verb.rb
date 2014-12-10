@@ -1,5 +1,3 @@
-require 'set'
-
 Dir[File.join File.dirname(__FILE__), 'verb', '*.rb'].each do |filename|
   require_relative filename
 end

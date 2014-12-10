@@ -5,22 +5,24 @@ module Opushon
   module Type
     # The type number.
     class Number < Base
-      def initialize(constraints)
-        @min  = constraints.delete('min')   { nil }
-        @max  = constraints.delete('max')   { nil }
-        @step = constraints.delete('step')  { nil }
+      def initialize( min: nil,
+                      max: nil )
+
+        if !min.nil? && !max.nil?
+          fail MinIsGreaterThanMaxError if min > max
+        end
+
+        @min = min
+        @max = max
+
+        freeze
       end
 
-      def default
-        0
-      end
-
-      def to_h
-        super.merge({
-          'min'   => @min,
-          'max'   => @max,
-          'step'  => @step
-        })
+      def constraints
+        {
+          min: @min,
+          max: @max
+        }
       end
     end
   end

@@ -2,9 +2,9 @@ require_relative 'base'
 
 # Namespace for the Opushon library.
 module Opushon
-  module Type
-    # The type number.
-    class Array < Base
+  module Parameter
+    # Parse a Opushon output.
+    class Output < Base
     end
   end
 end

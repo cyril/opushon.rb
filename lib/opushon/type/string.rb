@@ -5,22 +5,27 @@ module Opushon
   module Type
     # The type string.
     class String < Base
-      def initialize(constraints)
-        @minlen  = constraints.delete('minlen')   { nil }
-        @maxlen  = constraints.delete('maxlen')   { nil }
-        @pattern = constraints.delete('pattern')  { nil }
+      def initialize( minlen:   nil,
+                      maxlen:   nil,
+                      pattern:  nil )
+
+        if !minlen.nil? && !maxlen.nil?
+          fail MinlenIsLongerThanMaxlenError if minlen > maxlen
+        end
+
+        @minlen   = minlen
+        @maxlen   = maxlen
+        @pattern  = pattern
+
+        freeze
       end
 
-      def default
-        ''
-      end
-
-      def to_h
-        super.merge({
-          'minlen'  => @minlen,
-          'maxlen'  => @maxlen,
-          'pattern' => @pattern
-        })
+      def constraints
+        {
+          minlen:   @minlen,
+          maxlen:   @maxlen,
+          pattern:  @pattern
+        }
       end
     end
   end

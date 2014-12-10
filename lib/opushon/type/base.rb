@@ -3,15 +3,22 @@ module Opushon
   module Type
     # Abstract class.
     class Base
-      def default
-        nil
+      def initialize(*)
+        freeze
       end
 
       def to_h
         {
-          'default' => default,
-          'type'    => self.class.name.split('::').last.downcase
-        }
+          type: to_sym
+        }.merge(constraints)
+      end
+
+      def to_sym
+        self.class.name.split('::').last.downcase
+      end
+
+      def constraints
+        {}
       end
     end
   end

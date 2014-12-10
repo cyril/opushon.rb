@@ -1,3 +1,5 @@
+require 'pathname'
+
 # Namespace for the Opushon library.
 module Opushon
   # Gem version
