@@ -28,7 +28,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'string',
+                              type:               :string,
                               nullifiable:        true)
           end
         end
@@ -39,7 +39,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'string',
+                              type:               :string,
                               nullifiable:        true)
           end
         end
@@ -50,7 +50,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'number',
+                              type:               :number,
                               nullifiable:        true)
           end
         end
@@ -61,7 +61,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'boolean',
+                              type:               :boolean,
                               nullifiable:        true)
           end
         end
@@ -72,7 +72,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'array',
+                              type:               :array,
                               nullifiable:        true)
           end
         end
@@ -83,7 +83,7 @@ describe Opushon::Parameter::Output do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'hash',
+                              type:               :hash,
                               nullifiable:        true)
           end
         end
@@ -100,7 +100,7 @@ describe Opushon::Parameter::Output do
 
         o.to_h.must_equal(title:              '',
                           description:        'State of the issues to return.',
-                          type:               'boolean',
+                          type:               :boolean,
                           nullifiable:        true)
       end
     end

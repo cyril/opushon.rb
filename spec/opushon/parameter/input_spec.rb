@@ -28,7 +28,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'string',
+                              type:               :string,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil,
@@ -44,7 +44,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'string',
+                              type:               :string,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil,
@@ -60,7 +60,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'number',
+                              type:               :number,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil,
@@ -75,7 +75,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'boolean',
+                              type:               :boolean,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil)
@@ -88,7 +88,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'array',
+                              type:               :array,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil)
@@ -101,7 +101,7 @@ describe Opushon::Parameter::Input do
 
             o.to_h.must_equal(title:              '',
                               description:        '',
-                              type:               'hash',
+                              type:               :hash,
                               nullifiable:        true,
                               query_string:       true,
                               restricted_values:  nil)
@@ -135,7 +135,7 @@ describe Opushon::Parameter::Input do
 
         o.to_h.must_equal(title:              '',
                           description:        'State of the issues to return.',
-                          type:               'boolean',
+                          type:               :boolean,
                           nullifiable:        true,
                           query_string:       false,
                           restricted_values:  [

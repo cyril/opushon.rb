@@ -159,7 +159,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Identify the page to return.",
                             :nullifiable=>true,
-                            :type=>"number",
+                            :type=>:number,
                             :min=>1,
                             :max=>nil
                         },
@@ -169,7 +169,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Indicate the number of issues per page.",
                             :nullifiable=>true,
-                            :type=>"number",
+                            :type=>:number,
                             :min=>1,
                             :max=>100
                         },
@@ -195,7 +195,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Indicates the state of the issues to return.",
                             :nullifiable=>true,
-                            :type=>"string",
+                            :type=>:string,
                             :minlen=>nil,
                             :maxlen=>nil,
                             :pattern=>nil
@@ -206,25 +206,25 @@ describe Opushon do
                             :title=>"",
                             :description=>"The datetime that the resource was created at.",
                             :nullifiable=>false,
-                            :type=>"string"
+                            :type=>:string
                         },
                         :title=>{
                             :title=>"",
                             :description=>"The title of the resource.",
                             :nullifiable=>false,
-                            :type=>"string"
+                            :type=>:string
                         },
                         :body=>{
                             :title=>"",
                             :description=>"The body of the resource.",
                             :nullifiable=>true,
-                            :type=>"string"
+                            :type=>:string
                         },
                         :state=>{
                             :title=>"",
                             :description=>"Indicates the state of the issue.",
                             :nullifiable=>false,
-                            :type=>"string"
+                            :type=>:string
                         }
                     }
                 },
@@ -251,7 +251,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Issue title.",
                             :nullifiable=>false,
-                            :type=>"string",
+                            :type=>:string,
                             :minlen=>nil,
                             :maxlen=>255,
                             :pattern=>nil
@@ -262,7 +262,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Issue body.",
                             :nullifiable=>true,
-                            :type=>"string",
+                            :type=>:string,
                             :minlen=>nil,
                             :maxlen=>nil,
                             :pattern=>nil
@@ -289,7 +289,7 @@ describe Opushon do
                             :title=>"",
                             :description=>"Labels to associate with this issue.",
                             :nullifiable=>true,
-                            :type=>"string",
+                            :type=>:string,
                             :minlen=>nil,
                             :maxlen=>nil,
                             :pattern=>nil

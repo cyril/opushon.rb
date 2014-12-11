@@ -14,7 +14,7 @@ module Opushon
       end
 
       def to_sym
-        self.class.name.split('::').last.downcase
+        self.class.name.split('::').last.downcase.to_sym
       end
 
       def constraints
