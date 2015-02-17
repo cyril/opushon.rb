@@ -1,6 +1,24 @@
 # Opushon
 
-An [Opushon's body](https://github.com/cyril/opushon) parser and emitter.
+[![Build Status](https://travis-ci.org/cyril/opushon.svg?branch=master)](https://travis-ci.org/cyril/opushon)
+[![Dependency Status](https://gemnasium.com/cyril/opushon.svg)](https://gemnasium.com/cyril/opushon)
+[![Gem Version](http://img.shields.io/gem/v/opushon.svg)](https://rubygems.org/gems/opushon)
+[![Inline docs](http://inch-ci.org/github/cyril/opushon.svg?branch=master)](http://inch-ci.org/github/cyril/opushon)
+[![Documentation](http://img.shields.io/:yard-docs-38c800.svg)](http://rubydoc.info/gems/opushon/frames)
+
+> An [Opushon's body](https://github.com/cyril/opushon) parser and emitter.
+
+## Contact
+
+* Home page: https://github.com/cyril/opushon
+* Bugs/issues: https://github.com/cyril/opushon/issues
+* Support: https://stackoverflow.com/questions/tagged/opushon
+
+## Rubies
+
+* [MRI](https://www.ruby-lang.org/)
+* [Rubinius](http://rubini.us/)
+* [JRuby](http://jruby.org/)
 
 ## Installation
 
@@ -22,10 +40,25 @@ Or install it yourself as:
 
 ```ruby
 # Parse some Opushon
-Opushon.load('{"DELETE":{"title": "Delete issues","description":"Remove every issues."}}') # => an Opushon instance
+opushon = Opushon.load('{
+            "DELETE": {
+              "title": "Delete issues",
+              "description": "Remove every issues.",
+              "request": {
+                "headers": {},
+                "query_string": {},
+                "body": {}
+              },
+              "response": {
+                "headers": {},
+                "query_string": {},
+                "body": {}
+              }
+            }
+          }') # => an Opushon instance
 
 # Emit some Opushon
-Opushon.dump(an Opushon instance) # => '{"DELETE":{"title": "Delete issues","description":"Remove every issues."}}'
+Opushon.dump(opushon) # => '{"DELETE":{"title":"Delete issues","description":"Remove every issues.","request":{"headers":{},"query_string":{},"body":{}},"response":{"headers":{},"query_string":{},"body":{}}}}'
 ```
 
 ## Contributing
