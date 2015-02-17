@@ -1,17 +1,17 @@
 # Opushon
 
-[![Build Status](https://travis-ci.org/cyril/opushon.svg?branch=master)](https://travis-ci.org/cyril/opushon)
-[![Dependency Status](https://gemnasium.com/cyril/opushon.svg)](https://gemnasium.com/cyril/opushon)
+[![Build Status](https://travis-ci.org/cyril/opushon.rb.svg?branch=master)](https://travis-ci.org/cyril/opushon.rb)
+[![Dependency Status](https://gemnasium.com/cyril/opushon.rb.svg)](https://gemnasium.com/cyril/opushon.rb)
 [![Gem Version](http://img.shields.io/gem/v/opushon.svg)](https://rubygems.org/gems/opushon)
-[![Inline docs](http://inch-ci.org/github/cyril/opushon.svg?branch=master)](http://inch-ci.org/github/cyril/opushon)
+[![Inline docs](http://inch-ci.org/github/cyril/opushon.rb.svg?branch=master)](http://inch-ci.org/github/cyril/opushon.rb)
 [![Documentation](http://img.shields.io/:yard-docs-38c800.svg)](http://rubydoc.info/gems/opushon/frames)
 
 > An [Opushon's body](https://github.com/cyril/opushon) parser and emitter.
 
 ## Contact
 
-* Home page: https://github.com/cyril/opushon
-* Bugs/issues: https://github.com/cyril/opushon/issues
+* Home page: https://github.com/cyril/opushon.rb
+* Bugs/issues: https://github.com/cyril/opushon.rb/issues
 * Support: https://stackoverflow.com/questions/tagged/opushon
 
 ## Rubies
@@ -58,7 +58,7 @@ opushon = Opushon.load('{
           }') # => an Opushon instance
 
 # Emit some Opushon
-Opushon.dump(opushon) # => '{"DELETE":{"title":"Delete issues","description":"Remove every issues.","request":{"headers":{},"query_string":{},"body":{}},"response":{"headers":{},"query_string":{},"body":{}}}}'
+Opushon.dump(opushon) # => "{\"GET\":null,\"PATCH\":null,\"PUT\":null,\"POST\":null,\"DELETE\":{\"title\":\"Delete issues\",\"description\":\"Remove every issues.\",\"request\":{\"headers\":{},\"query_string\":{},\"body\":{}},\"response\":{\"headers\":{},\"body\":{}}}}"
 ```
 
 ## Contributing
