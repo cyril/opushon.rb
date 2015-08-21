@@ -5,7 +5,6 @@ script: 'bundle exec rake test:coverage --trace'
 before_install:
   - gem install bundler
 rvm:
-  - 2.0
   - 2.1
   - 2.2
   - ruby-head
