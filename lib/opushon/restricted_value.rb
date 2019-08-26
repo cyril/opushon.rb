@@ -1,4 +1,8 @@
+# frozen_string_literal: true
+
 module Opushon
+  # If present, the value of restricted_values is an array where each item
+  #   contains a hash.
   class RestrictedValue
     include Virtus.model(strict: true)
 

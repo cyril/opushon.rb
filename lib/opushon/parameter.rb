@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require_relative 'restricted_value'
 
 module Opushon
+  # The content of headers, query string and body params MUST be described with
+  #   the keys below. When a key is missing, its default value is assigned.
   class Parameter
     include Virtus.model(strict: true)
 
@@ -10,11 +14,11 @@ module Opushon
     attribute :nullifiable,       Boolean,                default: true,      required: true
     attribute :restricted_values, Array[RestrictedValue],                     required: false
     attribute :example,           BasicObject,                                required: false
-    attribute :minlen,            Fixnum,                                     required: false
-    attribute :maxlen,            Fixnum,                                     required: false
+    attribute :minlen,            Integer,                                    required: false
+    attribute :maxlen,            Integer,                                    required: false
     attribute :pattern,           Regexp,                                     required: false
-    attribute :min,               Fixnum,                                     required: false
-    attribute :max,               Fixnum,                                     required: false
+    attribute :min,               Integer,                                    required: false
+    attribute :max,               Integer,                                    required: false
 
     def to_h
       h = {
@@ -30,7 +34,7 @@ module Opushon
         h.update(
           minlen:   @minlen,
           maxlen:   @maxlen,
-          pattern:  (@pattern.nil? ? nil : @pattern.to_s)
+          pattern:  @pattern&.to_s
         )
       end
 
@@ -40,16 +44,16 @@ module Opushon
           max: @max
         )
       end
+
+      h
     end
 
     private
 
     def maybe_to_a(object)
-      if object.nil?
-        nil
-      else
-        object.map(&:to_h)
-      end
+      return if object.nil?
+
+      object.map(&:to_h)
     end
   end
 end

@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/cyril/opushon.rb.svg?branch=master)][travis]
 [![Gem Version](https://badge.fury.io/rb/opushon.svg)][gem]
 [![Inline docs](http://inch-ci.org/github/cyril/opushon.rb.svg?branch=master)][inchpages]
-[![Documentation](http://img.shields.io/:yard-docs-38c800.svg)][rubydoc]
 
 > An [Opushon's body](https://github.com/cyril/opushon) parser and emitter.
 

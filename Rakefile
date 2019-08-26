@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'bundler/gem_tasks'
 require 'rake/testtask'
 require 'rubocop/rake_task'
@@ -16,5 +18,4 @@ namespace :test do
   end
 end
 
-task(:doc_stats) { ruby '-S yard stats' }
-task default: [:test, :doc_stats, :rubocop]
+task default: %i[test rubocop]
