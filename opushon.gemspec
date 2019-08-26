@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['contact@cyril.email']
 
   spec.summary       = 'A HTTP Opushon parser and emitter'
-  spec.description   = 'An Opushon\'s body parser and emitter.'
+  spec.description   = "An Opushon's body parser and emitter."
   spec.homepage      = 'https://github.com/cyril/opushon.rb'
   spec.license       = 'MIT'
 
@@ -15,8 +15,6 @@ Gem::Specification.new do |spec|
     `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^test/}) }
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
-
-  spec.add_dependency 'virtus',                 '~> 1.0.5'
 
   spec.add_development_dependency 'bundler',    '~> 2.0'
   spec.add_development_dependency 'rake',       '~> 12.3'

@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require 'virtus'
 require 'json'
 
 # Namespace for the Opushon library.
@@ -20,7 +19,7 @@ module Opushon
   # @return [Body] the Ruby data structure
   def self.load(opushon_string)
     opushon_hash = JSON.parse(opushon_string)
-    Body.new(opushon_hash)
+    Body.load(opushon_hash)
   end
 
   # Dump Ruby object to a Opushon string.
